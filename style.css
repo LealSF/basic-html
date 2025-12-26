@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  padding: 2rem 3rem;
+  border-bottom: 2px solid #000;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav .nav-name {
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+header nav .nav-menu a {
+  text-decoration: none;
+  color: #000;
+  margin-inline-end: 1rem;
+}
+
+header nav .nav-menu a::after {
+  content: "/";
+  margin-inline-start: 1rem;
+  cursor: default;
+}
+
+header nav .nav-menu a:last-child::after {
+  content: "";
+}
+
+header .header-title {
+  text-align: center;
+  margin: 6rem 0;
+}
+
+header .header-title h1 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+header .header-title p {
+  font-size: 1.2rem;
+}
+
+.main-body {
+    display: flex;
+}
+
+.side-left .title,
+.side-right .title,
+.sec-news .title {
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.side-left {
+  flex: 1;
+  border: 1px solid #000;
+}
+
+.side-left ul {
+    list-style: none;
+}
+
+.side-left ul li {
+    width: 100%;
+    padding: 1rem;
+    border-bottom: 1px solid #000;
+}
+
+.side-left ul li:last-child {
+    border-bottom: none;
+}
+
+.sec-news {
+  flex: 3;
+  border: 1px solid #000;
+}
+
+.sec-news .news {
+    padding: 1rem;
+    border-bottom: 1px solid #000;
+}
+
+.sec-news .news:last-child {
+    border-bottom: none;
+}
+
+.sec-news .news .body .job {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.sec-news .news .body .detail {
+    margin-bottom: 1rem;
+}
+
+.sec-news .news .body .visit-job {
+    text-decoration: none;
+    color: blue;
+}
+
+.side-right {
+  flex: 1;
+  border: 1px solid #000;
+}
+
+.side-right .desc {
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.side-right .body {
+    padding: 1rem;
+}
+
+.side-right .body .list-title {
+    margin-bottom: 1rem;
+}
+
+.side-right .body ul {
+    list-style:  '- ';
+    margin-left: 1rem;
+}
+
+.side-right .body ul li {
+    margin-bottom: 0.5rem;
+}
+
+.sec-review {
+    padding: 2rem 4rem;
+}
+
+.sec-review .title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.sec-review .list-reviews {
+    display: flex;
+    gap: 2rem;
+}
+
+.sec-review .list-reviews .card {
+    padding: 2rem;
+    border: 1px solid #000;
+    border-radius: 40px;
+}
+
+.sec-review .list-reviews .card .review-desc {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.sec-review .list-reviews .card .profile .info {
+    font-size: 1rem;
+    color: grey;
+}
+
+footer {
+    text-align: center;
+    padding: 5rem 0;
+}
+
+footer p {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 398px) {
+  header {
+    width: 100%;
+    padding: 3rem 0;
+  }
+
+  header nav {
+    flex-direction: column;
+    justify-content: unset;
+    text-align: center;
+  }
+
+  header nav .nav-name {
+    font-size: 0.5rem;
+  }
+
+  header nav .nav-menu a {
+    font-size: 0.6rem;
+    margin-inline-end: 0;
+  }
+
+  header nav .nav-menu a::after {
+    margin-inline-start: 0.5rem;
+  }
+
+  header .header-title {
+    margin: 2rem 0;
+  }
+
+  header .header-title h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  header .header-title p {
+    font-size: 0.9rem;
+  }
+
+  .main-body {
+    flex-direction: column;
+  }
+
+  .sec-review .list-reviews {
+    flex-direction: column;
+  }
+
+  .side-left .title,
+  .side-right .title,
+  .sec-news .title {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .side-left ul {
+    text-align: center;
+  }
+
+  .side-left ul li {
+    font-size: 0.8rem;
+    padding: 0.5rem 0;
+    border: 1px solid #000;
+    border-bottom: 0;
+    background-color: azure;
+  }
+
+  .sec-news .news {
+    border: 1px solid #000;
+    border-bottom: 0;
+    background-color: azure;
+  }
+
+  .sec-news .news .body .job {
+    font-size: 1rem;
+  }
+
+  .sec-news .news .body .detail {
+    font-size: 0.8rem;
+  }
+
+  .sec-news .news .body .visit-job {
+    font-size: 0.6rem;
+  }
+
+  .side-right .desc {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .side-right .body {
+    padding: 0.5rem 1rem;
+  }
+
+  .side-right .body .list-title {
+    font-size: 0.8rem;
+  }
+
+  .side-right .body ul li {
+    font-size: 0.7rem;
+  }
+
+  .sec-review {
+    padding: 1rem 2rem;
+  }
+
+  .sec-review .title {
+    font-size: 1.2rem;
+  }
+
+  .sec-review .list-reviews {
+    gap: 1rem;
+  }
+
+  .sec-review .list-reviews .card {
+    padding: 1.5rem;
+  }
+
+  .sec-review .list-reviews .card .review-desc {
+    font-size: 0.8rem;
+  }
+
+  .sec-review .list-reviews .card .profile .info {
+    font-size: 0.8rem;
+  }
+
+  footer {
+    padding: 3rem 0;
+  }
+
+  footer p {
+    font-size: 1rem;
+  }
+}
