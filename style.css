@@ -6,6 +6,7 @@
 
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: relative;
 }
 
 header {
@@ -179,6 +180,58 @@ footer p {
     font-size: 1.5rem;
 }
 
+.cookies {
+  position: fixed;
+  width: 300px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #232323;
+  color: #a6a6a6;
+  padding: 2rem;
+  border-radius: 20px;
+}
+
+.cookies.hidden {
+  display: none;
+}
+
+.cookies .btn-x {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  width: 1rem;
+  fill: #a6a6a6;
+  cursor: pointer;
+}
+
+.cookies .icon svg {
+  fill: #a6a6a6;
+  width: 4rem;
+  margin-bottom: 4rem;
+}
+
+.cookies .body-cookie p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.cookies .body-cookie .btn-cookie {
+  padding: 1rem 2rem;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 1rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: right 0.3s ease;
+}
+
+.cookies .body-cookie .btn-cookie:hover {
+  background-color: #232323;
+  border: 1px solid #a6a6a6;
+  color: #a6a6a6;
+}
+
+
 @media (max-width: 398px) {
   header {
     width: 100%;
@@ -310,5 +363,28 @@ footer p {
 
   footer p {
     font-size: 1rem;
+  }
+
+  .cookies{
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    border-radius: 0;
+    padding: 1rem;
+  }
+
+  .cookies .icon svg {
+    width: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .cookies .body-cookie p {
+    font-size: 0.8rem;
+  }
+
+  .cookies .body-cookie .btn-cookie {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    transition: bottom 0.3s ease;
   }
 }
